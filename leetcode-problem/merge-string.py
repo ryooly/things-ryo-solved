@@ -1,7 +1,17 @@
 def twistEngine(word1, word2):
+    w1 = word1
+    w2 = word2
+
     result = ""
-    for i in range(len(word1 + word2)):
+
+    for i in range(max(len(w1), len(w2))):
+        if i < len(w1):
+            result += w1[i]
         
+        if i < len(w2):
+            result += w2[i]
+    
+    return result
 
 
 class Solution(object):
@@ -14,10 +24,5 @@ class Solution(object):
 
 
 parents = Solution()
-result = parents.mergeAlternately("england", "football")
+result = parents.mergeAlternately("satu", "dua")
 print(result)
-
-
-# pake looping ganjil genap apabila emang sala satunya udah abis tinggal push push aja 
-
-# im stuck btw 
